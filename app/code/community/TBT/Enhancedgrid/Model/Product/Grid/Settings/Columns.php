@@ -53,7 +53,7 @@ class TBT_Enhancedgrid_Model_Product_Grid_Settings_Columns extends Varien_Object
 
     public function getDefaults()
     {
-        $truncate = Mage::getStoreConfig('enhancedgrid/general/truncatelongtextafter');
+        $truncate = Mage::getStoreConfig('enhancedgrid/columns/truncatelongtextafter');
         $currency = $this->getStore()->getBaseCurrency()->getCode();
         $defaults = array(
             'cost' => array(
