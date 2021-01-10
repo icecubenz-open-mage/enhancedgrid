@@ -62,6 +62,15 @@
         </resources>
     </global>
     <adminhtml>
+        <translate>
+            <modules>
+                <TBT_Enhancedgrid>
+                    <files>
+                        <default>TBT_Enhancedgrid.csv</default>
+                    </files>
+                </TBT_Enhancedgrid>
+            </modules>
+        </translate>        
         <layout>
             <updates>
                 <enhancedgrid>
