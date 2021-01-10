@@ -299,7 +299,7 @@ class TBT_Enhancedgrid_Block_Catalog_Product_Grid extends Mage_Adminhtml_Block_W
                 ));
         }
 
-        $imgWidth = Mage::getStoreConfig('enhancedgrid/images/width') + 'px';
+        $imgWidth = Mage::getStoreConfig('enhancedgrid/images/width');
 
         if ($this->colIsVisible('thumbnail')) {
             $this->addColumn('thumbnail',
