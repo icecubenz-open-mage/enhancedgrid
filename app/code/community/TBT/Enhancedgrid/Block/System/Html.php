@@ -34,16 +34,6 @@ class TBT_Enhancedgrid_Block_System_Html
     public function render(Varien_Data_Form_Element_Abstract $element)
     {
         $html = '';
-        $html .= '
-        	<div style=" margin-bottom: 12px; width: 430px;">
-            Enhanced Grid v'.Mage::getConfig()->getNode('modules/TBT_Enhancedgrid/version').". <a href='https://github.com/jayelkaake/enhancedgrid' target='_blank'>Click here for updates.</a><BR />
-		";
-        $html .= Mage::getBlockSingleton('enhancedgrid/widget_loyalty')->toHtml();
-        $html .= '
-            </div>
-        ';
-        $html .= '';//$this->_getFooterHtml($element);
-
         return $html;
     }
 
