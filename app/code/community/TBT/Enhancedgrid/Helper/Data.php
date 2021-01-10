@@ -2,11 +2,23 @@
 
 class TBT_Enhancedgrid_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    public function getImageUrl($image_file)
+    /**
+     * Get url of cached thumbnail image
+     * Will generate cached image if doesn't exist
+     *
+     * @param  string  $image_file
+     * @param  Mage_Catalog_Model_Product  $product
+     * @return bool|string
+     */
+    public function getImageUrl($image_file, $product)
     {
         $url = false;
-        $url = Mage::getBaseUrl('media').'catalog/product'.$image_file;
-
+        if (!empty($image_file)) {
+            $helper = Mage::helper('catalog/image')->init($product, 'thumbnail');
+            $width = Mage::getStoreConfig( 'enhancedgrid/images/width');
+            $height = Mage::getStoreConfig( 'enhancedgrid/images/height');
+            $url = $helper->resize($width, $height)->__toString();
+        }
         return $url;
     }
 

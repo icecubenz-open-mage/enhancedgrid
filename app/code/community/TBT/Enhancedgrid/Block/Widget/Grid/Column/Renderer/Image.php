@@ -80,7 +80,7 @@ class TBT_Enhancedgrid_Block_Widget_Grid_Column_Renderer_Image extends Mage_Admi
         $val = $val2 = $row->getData($this->getColumn()->getIndex());
         $val = str_replace('no_selection', '', $val);
         $val2 = str_replace('no_selection', '', $val2);
-        $url = Mage::helper('enhancedgrid')->getImageUrl($val);
+        $url = Mage::helper('enhancedgrid')->getImageUrl($val, $row);
 
         if (!Mage::helper('enhancedgrid')->getFileExists($val)) {
             $dored = true;
