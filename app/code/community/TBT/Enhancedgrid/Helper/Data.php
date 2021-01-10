@@ -14,10 +14,15 @@ class TBT_Enhancedgrid_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $url = false;
         if (!empty($image_file)) {
-            $helper = Mage::helper('catalog/image')->init($product, 'thumbnail');
-            $width = Mage::getStoreConfig( 'enhancedgrid/images/width');
-            $height = Mage::getStoreConfig( 'enhancedgrid/images/height');
-            $url = $helper->resize($width, $height)->__toString();
+            try {
+                $helper = Mage::helper('catalog/image')->init($product, 'thumbnail');
+                $width = Mage::getStoreConfig('enhancedgrid/images/width');
+                $height = Mage::getStoreConfig('enhancedgrid/images/height');
+                $url = $helper->resize($width, $height)->__toString();
+            }
+            catch(Exception $e) {
+                $url = Mage::getDesign()->getSkinUrl('images/catalog/product/placeholder/image.jpg', array('_area' => 'frontend'));
+            }
         }
         return $url;
     }
