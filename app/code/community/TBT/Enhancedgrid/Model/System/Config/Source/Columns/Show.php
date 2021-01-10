@@ -41,6 +41,8 @@ class TBT_Enhancedgrid_Model_System_Config_Source_Columns_Show
         $cols[] = array('value' => 'categories',   'label' => 'Categories');
         //@nelkaake Tuesday April 27, 2010 :
         $cols[] = array('value' => 'created_at',   'label' => 'Date Created');
+        //@crysix 2017-05-04
+        $cols[] = array('value' => 'updated_at',   'label' => 'Date Updated');
         foreach ($collection->getItems() as $col) {
             $cols[] = array('value' => $col->getAttributeCode(),   'label' => $col->getFrontendLabel());
         }

@@ -99,6 +99,12 @@ class TBT_Enhancedgrid_Model_Product_Grid_Settings_Columns extends Varien_Object
                 'width' => '100px',
                 'header' => Mage::helper('catalog')->__('Date Created'),
             ),
+            //@crysix 2017-05-04
+            'updated_at' => array(
+                'type' => 'datetime',
+                'width' => '100px',
+                'header' => Mage::helper('catalog')->__('Date Updated'),
+            ),
             'special_price' => array(
                 'type' => 'price',
                 'width' => '30px',
