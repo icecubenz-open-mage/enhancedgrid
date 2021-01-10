@@ -266,12 +266,7 @@ class TBT_Enhancedgrid_Block_Catalog_Product_Grid extends Mage_Adminhtml_Block_W
     protected function _getStore()
     {
         $storeId = (int) $this->getRequest()->getParam('store', 0);
-        $store = Mage::app()->getStore($storeId);
-        if ($store->getId() != $storeId) {
-            $store = Mage::app()->getStore(0);
-        }
-
-        return $store;
+        return Mage::app()->getStore($storeId);
     }
 
     protected function _addColumnFilterToCollection($column)
@@ -667,19 +662,15 @@ class TBT_Enhancedgrid_Block_Catalog_Product_Grid extends Mage_Adminhtml_Block_W
 
     public function getRowUrl($row)
     {
-        //@nelkaake -m 16/11/10: Changed to use _getStore function
-        return $this->getUrl('adminhtml/catalog_product/edit',
-            array(
-                'store' => $this->_getStore(),
-                'id' => $row->getId(),
-            ));
+        return $this->getUrl('*/*/edit', array(
+            'store'=>$this->getRequest()->getParam('store'),
+            'id'=>$row->getId())
+        );
     }
 
     public function getGridUrl()
     {
-        return $this->getUrl('adminhtml/*/grid', array(
-            '_current' => true,
-        ));
+        return $this->getUrl('*/*/grid', array('_current'=>true));
     }
 
     protected function getMADivider($dividerHeading = '-------')
