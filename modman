@@ -1,6 +1,9 @@
-app/code/community/TBT/Enhancedgrid app/code/community/TBT/Enhancedgrid
-app/locale/en_US/TBT_Enhancedgrid.csv app/locale/en_US/TBT_Enhancedgrid.csv
-app/design/adminhtml/default/default/layout/tbt_enhancedgrid.xml app/design/adminhtml/default/default/layout/tbt_enhancedgrid.xml
-app/design/adminhtml/default/default/template/tbt/enhancedgrid app/design/adminhtml/default/default/template/tbt/enhancedgrid
-app/etc/modules/TBT_Enhancedgrid.xml app/etc/modules/TBT_Enhancedgrid.xml
-js/tbt/enhancedgrid js/tbt/enhancedgrid
+app/code/community/TBT/Enhancedgrid/                                 app/code/community/TBT/Enhancedgrid/
+app/design/adminhtml/default/default/layout/tbt_enhancedgrid.xml     app/design/adminhtml/default/default/layout/tbt_enhancedgrid.xml
+app/design/adminhtml/default/default/template/tbt/enhancedgrid/      app/design/adminhtml/default/default/template/tbt/enhancedgrid/
+app/etc/modules/TBT_Enhancedgrid.xml                                 app/etc/modules/TBT_Enhancedgrid.xml
+app/locale/en_US/TBT_Enhancedgrid.csv                                app/locale/en_US/TBT_Enhancedgrid.csv
+js/tbt/enhancedgrid/customfunctions/catalog_products.js              js/tbt/enhancedgrid/customfunctions/catalog_products.js
+js/tbt/enhancedgrid/egsupplemental.js                                js/tbt/enhancedgrid/egsupplemental.js
+js/tbt/enhancedgrid/enhancedgrid.js                                  js/tbt/enhancedgrid/enhancedgrid.js
+js/tbt/enhancedgrid/resources/css/enhancedgrid.css                   js/tbt/enhancedgrid/resources/css/enhancedgrid.css
