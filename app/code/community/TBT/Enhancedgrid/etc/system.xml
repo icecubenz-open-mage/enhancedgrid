@@ -17,23 +17,6 @@
             <show_in_website>1</show_in_website>
             <show_in_store>0</show_in_store>
             <groups>
-                <about translate="label">
-                    <label>About This Extension</label>
-                    <sort_order>100</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <fields>
-                        <notice translate="label">
-                            <label>See https://github.com/jayelkaake/enhancedgrid for more information about this extension and to contribute.</label>
-                            <frontend_type>text</frontend_type>
-                            <frontend_model>enhancedgrid/system_html</frontend_model>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </notice>
-                    </fields>
-                </about>
                 <columns translate="label">
                     <label>Column Options</label>
                     <sort_order>200</sort_order>
