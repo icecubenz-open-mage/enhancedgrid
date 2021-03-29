@@ -44,6 +44,6 @@ Changes from the original:
 * Add updated_at column: https://github.com/crysix/enhancedgrid/commit/b9ffb2c0db9e23ed2e4b3d8f367d56d61b2cfb70s
 * Remove notifications
 * Remove advertisements on expired/outdated domains
-
+* Use the `adminhtml_catalog_product_index` instead of `default`. To prevent JS errors and loading on unintended adminhtml pages. This has the effect of the enhanced grid only working on the catalog product index (which I think is the only place it works anyway but I could be wrong!)
 
 All credit and copyright goes to the original author/s and contributors.
